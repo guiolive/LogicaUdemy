@@ -1,8 +1,17 @@
+using System;
 using System.Globalization;
-double area, raio, n = 3.14159;
 
-raio = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+namespace URI
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double area = 3.14159 * Math.Pow(raio, 2);
+            Console.WriteLine("A=" + area.ToString("F4", CultureInfo.InvariantCulture));
+            
 
-area = (n * (raio * raio));
-
-Console.WriteLine("A=" + area.ToString("F4", CultureInfo.InvariantCulture));
+        }
+    }
+}
